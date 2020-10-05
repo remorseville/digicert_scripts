@@ -9,12 +9,7 @@
 <h3 id="some-considerations">Some Considerations</h3>
 <ul>
 <li>
-<p>The URL used to get the orders in this example grabs everything for that user. This includes expired, rejected or renewed. If you are looking for a subset of orders there is some URL filtering that can be done. Here’s a few examples</p>
-<pre><code>  filters%5Bstatus%5D%5B0%5D=issued
-  filters%5Bstatus%5D%5B1%5D=pending
-  filters%5Bstatus%5D%5B2%5D=reissue_pending
-  filters%5Bsearch%5D%5B0%5D=%25{search_string}
-</code></pre>
+<p>The URL used to get the orders in this example grabs everything for that user. This includes expired, rejected or renewed. If you are looking for a subset of orders there is some URL filtering that can be done. Take a look at DigiCert’s docs for some more info. <a href="https://dev.digicert.com/services-api/#url-query-strings">https://dev.digicert.com/services-api/#url-query-strings</a></p>
 </li>
 <li>
 <p>User access with DigiCert orders is reserved for the “limited_user” role. The users that have access is just an array of user_id’s. I’ve found you can never remove the original requestor/owner but you can append to the array without needing to provide their user_id. Like any settings array with the DigiCert API any new one sent overwirtes the previous. So if you want to give multiple additional users access, you need to provide all their user_id’s in the same payload.</p>
