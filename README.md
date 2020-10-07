@@ -4,7 +4,7 @@
 <ul>
 <li>DigiCert API Key</li>
 <li>user_id of the current owner</li>
-<li>user_id of the user you can to give access to</li>
+<li>user_id of the user you want to give access</li>
 </ul>
 <h3 id="some-considerations">Some Considerations</h3>
 <ul>
